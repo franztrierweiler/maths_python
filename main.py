@@ -6,5 +6,6 @@ def angle (a,b,c):
   m=(c**2+a**2-b**2)/(2*a*c)
   return [degrees(acos(k)), degrees(acos(l)), degrees(acos(m))]
 
+print ("Exervice numéro 93")
 print ("Résultat du calcul des angles")
 print ("Angle = " + str(angle (5,4,3)) )
