@@ -44,5 +44,24 @@ def Syracuse2(n):
             
     return compteur
 
+def Maximum(n):
+    # We are looking for the value between 0 and n for which
+    # Syracuse2(n) is the greatest.
+    i = 1
+    candidat = i
+    temps_vol = 1
+    while (i <= n):
+        # Check if new flight length is greater than previous one !
+        if (Syracuse2(i) > temps_vol):
+            temps_vol = Syracuse2(i)
+            candidat = i
+        i = i + 1
+    
+    return candidat
+
 n=10000000000
 print "Syracuse(" + str(n) + ") = " + str(Syracuse(n)) + " avec un temps de vol de " + str(Syracuse2(n))
+
+N=5000
+print "Temps de vol le plus haut entre 1 et N = " + str(N) + " est pour n = " + str(Maximum(N))
+print "Il vaut " + str(Syracuse2(Maximum(N)))
