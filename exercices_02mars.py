@@ -2,7 +2,7 @@ from fractions import *
 
 def somme():
     S = 1
-    for i in range (1,20):
+    for i in range (1,21):
         S = S + pow(Fraction(1,3),i)
         
     # Converts fraction to float
@@ -65,3 +65,18 @@ print "Syracuse(" + str(n) + ") = " + str(Syracuse(n)) + " avec un temps de vol 
 N=5000
 print "Temps de vol le plus haut entre 1 et N = " + str(N) + " est pour n = " + str(Maximum(N))
 print "Il vaut " + str(Syracuse2(Maximum(N)))
+
+def produit_impairs(i):
+    P = 1
+    print range(1,i)
+    for k in range (1, i):
+        P = P * (2*k - 1)
+        print (2*k-1)
+    
+    return P
+    
+N=2
+print "Produit des " + str(N) + "-1 premiers nombres impairs = " + str(produit_impairs(N))
+
+N=5
+print "Produit des " + str(N) + "-1 premiers nombres impairs = " + str(produit_impairs(N))
