@@ -68,10 +68,8 @@ print "Il vaut " + str(Syracuse2(Maximum(N)))
 
 def produit_impairs(i):
     P = 1
-    print range(1,i)
     for k in range (1, i):
         P = P * (2*k - 1)
-        print (2*k-1)
     
     return P
     
