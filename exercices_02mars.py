@@ -8,8 +8,6 @@ def somme():
     # Converts fraction to float
     # and returns the result
     return float(S);
-    
-print "Somme = " + str(somme())
 
 def compte_espaces(phrase):
     nbre = 0
@@ -18,9 +16,6 @@ def compte_espaces(phrase):
             nbre=nbre+1
     
     return nbre
-    
-la_phrase = "Voici une phrase pour le programmeur Badie"
-print "Il y a " + str(compte_espaces(la_phrase)) + " espaces dans la phrase - " + la_phrase + "-"
 
 def Syracuse(n):
     resultat = n
@@ -59,13 +54,6 @@ def Maximum(n):
     
     return candidat
 
-n=10000000000
-print "Syracuse(" + str(n) + ") = " + str(Syracuse(n)) + " avec un temps de vol de " + str(Syracuse2(n))
-
-N=5000
-print "Temps de vol le plus haut entre 1 et N = " + str(N) + " est pour n = " + str(Maximum(N))
-print "Il vaut " + str(Syracuse2(Maximum(N)))
-
 def produit_impairs(i):
     P = 1
     for k in range (1, i):
@@ -73,8 +61,20 @@ def produit_impairs(i):
     
     return P
     
+print ("Somme = " + str(somme() ))
+
+la_phrase = "Voici une phrase pour le programmeur Badie"
+print ("Il y a " + str(compte_espaces(la_phrase)) + " espaces dans la phrase - " + la_phrase + "-")
+
+N=5000
+print("Temps de vol le plus haut entre 1 et N = " + str(N) + " est pour n = " + str(Maximum(N)))
+print("Il vaut " + str(Syracuse2(Maximum(N))))
+
+n=10000000000
+print("Syracuse(" + str(n) + ") = " + str(Syracuse(n)) + " avec un temps de vol de " + str(Syracuse2(n)))
+
 N=2
-print "Produit des " + str(N) + "-1 premiers nombres impairs = " + str(produit_impairs(N))
+print ("Produit des " + str(N) + "-1 premiers nombres impairs = " + str(produit_impairs(N)))
 
 N=5
-print "Produit des " + str(N) + "-1 premiers nombres impairs = " + str(produit_impairs(N))
+print ("Produit des " + str(N) + "-1 premiers nombres impairs = " + str(produit_impairs(N)))
